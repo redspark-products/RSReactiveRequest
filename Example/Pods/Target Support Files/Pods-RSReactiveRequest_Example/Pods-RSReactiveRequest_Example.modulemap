@@ -1,0 +1,6 @@
+framework module Pods_RSReactiveRequest_Example {
+  umbrella header "Pods-RSReactiveRequest_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

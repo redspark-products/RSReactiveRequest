@@ -1,0 +1,6 @@
+framework module RSReactiveRequest {
+  umbrella header "RSReactiveRequest-umbrella.h"
+
+  export *
+  module * { export * }
+}

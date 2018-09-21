@@ -1,11 +1,16 @@
 use_frameworks!
 
 target 'RSReactiveRequest_Example' do
-  pod 'RSReactiveRequest', :path => '../'
 
-  target 'RSReactiveRequest_Tests' do
-    inherit! :search_paths
+    use_frameworks!
+    inhibit_all_warnings!
 
+    platform :ios, '9.0'
     
-  end
+    pod 'RSReactiveRequest', :path => '../'
+
+    target 'RSReactiveRequest_Tests' do
+        inherit! :search_paths
+
+    end
 end

@@ -1,0 +1,6 @@
+framework module Pods_RSReactiveRequest_Tests {
+  umbrella header "Pods-RSReactiveRequest_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

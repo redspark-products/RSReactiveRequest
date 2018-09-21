@@ -1,42 +1,27 @@
-#
-# Be sure to run `pod lib lint RSReactiveRequest.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = 'RSReactiveRequest'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of RSReactiveRequest.'
+    s.name             = 'RSReactiveRequest'
+    s.version          = '0.0.1'
+    s.summary          = 'A short description of RSReactiveRequest.'
+    s.description      = <<-DESC
+    TODO: Add long description of the pod here.
+    DESC
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+    s.homepage         = 'https://github.com/redspark-io/RSReactiveRequest'
+    s.license          = { :type => 'MIT', :file => 'LICENSE' }
+    s.author           = { 'Marcos Alessandro da Fonseca' => 'marcos.ale.fonseca@gmail.com' }
+    s.source           = { :git => 'https://github.com/redspark-io/RSReactiveRequest.git', :tag => s.version.to_s }
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+    s.ios.deployment_target = '9.0'
+    s.swift_version = '4.0'
+    s.module_name = 'RSReactiveRequest'
+    s.requires_arc = true
 
-  s.homepage         = 'https://github.com/marcos.ale.fonseca@gmail.com/RSReactiveRequest'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'marcos.ale.fonseca@gmail.com' => 'marcos.ale.fonseca@gmail.com' }
-  s.source           = { :git => 'https://github.com/marcos.ale.fonseca@gmail.com/RSReactiveRequest.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+    s.source_files = 'RSReactiveRequest/Classes/**/*'
 
-  s.ios.deployment_target = '8.0'
+    s.dependency 'Alamofire'
+    s.dependency 'AlamofireImage'
+    s.dependency 'CodableAlamofire'
+    s.dependency 'RxSwift'
+    s.dependency 'KeychainAccess'
 
-  s.source_files = 'RSReactiveRequest/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'RSReactiveRequest' => ['RSReactiveRequest/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
