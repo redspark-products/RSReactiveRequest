@@ -18,12 +18,7 @@
 		8DFAC05021553BC800FE6476 /* PostDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC04F21553BC800FE6476 /* PostDecodable.swift */; };
 		8DFAC05221553D5A00FE6476 /* PostEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC05121553D5A00FE6476 /* PostEncodable.swift */; };
 		8DFAC05B2155400000FE6476 /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DFAC0542155400000FE6476 /* Posts.storyboard */; };
-		8DFAC05C2155400000FE6476 /* PostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC0552155400000FE6476 /* PostsPresenter.swift */; };
-		8DFAC05D2155400000FE6476 /* PostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC0562155400000FE6476 /* PostsRouter.swift */; };
 		8DFAC05E2155400000FE6476 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC0572155400000FE6476 /* PostsViewController.swift */; };
-		8DFAC05F2155400000FE6476 /* PostsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC0582155400000FE6476 /* PostsProtocols.swift */; };
-		8DFAC0602155400000FE6476 /* PostsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC0592155400000FE6476 /* PostsInteractor.swift */; };
-		8DFAC0612155400000FE6476 /* PostsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC05A2155400000FE6476 /* PostsRemoteDataManager.swift */; };
 		8DFAC06A215540B600FE6476 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAC069215540B600FE6476 /* Post.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,12 +54,7 @@
 		8DFAC04F21553BC800FE6476 /* PostDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDecodable.swift; sourceTree = "<group>"; };
 		8DFAC05121553D5A00FE6476 /* PostEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEncodable.swift; sourceTree = "<group>"; };
 		8DFAC0542155400000FE6476 /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
-		8DFAC0552155400000FE6476 /* PostsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenter.swift; sourceTree = "<group>"; };
-		8DFAC0562155400000FE6476 /* PostsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRouter.swift; sourceTree = "<group>"; };
 		8DFAC0572155400000FE6476 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
-		8DFAC0582155400000FE6476 /* PostsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsProtocols.swift; sourceTree = "<group>"; };
-		8DFAC0592155400000FE6476 /* PostsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsInteractor.swift; sourceTree = "<group>"; };
-		8DFAC05A2155400000FE6476 /* PostsRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRemoteDataManager.swift; sourceTree = "<group>"; };
 		8DFAC069215540B600FE6476 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F29C6D2D5C46DC15B61F5AF5 /* Pods-RSReactiveRequest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSReactiveRequest_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSReactiveRequest_Tests/Pods-RSReactiveRequest_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,8 +123,9 @@
 		607FACD21AFB9204008FA782 /* Example for RSReactiveRequest */ = {
 			isa = PBXGroup;
 			children = (
+				8DFAC0542155400000FE6476 /* Posts.storyboard */,
+				8DFAC0572155400000FE6476 /* PostsViewController.swift */,
 				8DFAC068215540AB00FE6476 /* Models */,
-				8D5E50B8215522EE0024578E /* Modules */,
 				8D5E50B6215522820024578E /* Network */,
 				8D5E50B7215522B00024578E /* Resources */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -197,14 +188,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		8D5E50B8215522EE0024578E /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				8DFAC05321553FB500FE6476 /* Posts */,
-			);
-			name = Modules;
-			sourceTree = "<group>";
-		};
 		8D5E50B92155230B0024578E /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,68 +204,6 @@
 				8DFAC05121553D5A00FE6476 /* PostEncodable.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		8DFAC05321553FB500FE6476 /* Posts */ = {
-			isa = PBXGroup;
-			children = (
-				8DFAC0672155403E00FE6476 /* DataManager */,
-				8DFAC0662155403400FE6476 /* Interactor */,
-				8DFAC0642155402100FE6476 /* Presenter */,
-				8DFAC0632155401500FE6476 /* Protocols */,
-				8DFAC0652155402B00FE6476 /* Router */,
-				8DFAC0622155400600FE6476 /* View */,
-			);
-			name = Posts;
-			sourceTree = "<group>";
-		};
-		8DFAC0622155400600FE6476 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8DFAC0542155400000FE6476 /* Posts.storyboard */,
-				8DFAC0572155400000FE6476 /* PostsViewController.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		8DFAC0632155401500FE6476 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				8DFAC0582155400000FE6476 /* PostsProtocols.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		8DFAC0642155402100FE6476 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				8DFAC0552155400000FE6476 /* PostsPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		8DFAC0652155402B00FE6476 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				8DFAC0562155400000FE6476 /* PostsRouter.swift */,
-			);
-			name = Router;
-			sourceTree = "<group>";
-		};
-		8DFAC0662155403400FE6476 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				8DFAC0592155400000FE6476 /* PostsInteractor.swift */,
-			);
-			name = Interactor;
-			sourceTree = "<group>";
-		};
-		8DFAC0672155403E00FE6476 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				8DFAC05A2155400000FE6476 /* PostsRemoteDataManager.swift */,
-			);
-			name = DataManager;
 			sourceTree = "<group>";
 		};
 		8DFAC068215540AB00FE6476 /* Models */ = {
@@ -467,16 +388,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DFAC05021553BC800FE6476 /* PostDecodable.swift in Sources */,
-				8DFAC0612155400000FE6476 /* PostsRemoteDataManager.swift in Sources */,
 				8D5E50BD215525430024578E /* TypicodeServiceProtocol.swift in Sources */,
 				8DFAC06A215540B600FE6476 /* Post.swift in Sources */,
 				8DFAC05E2155400000FE6476 /* PostsViewController.swift in Sources */,
 				8DFAC05221553D5A00FE6476 /* PostEncodable.swift in Sources */,
-				8DFAC05F2155400000FE6476 /* PostsProtocols.swift in Sources */,
-				8DFAC0602155400000FE6476 /* PostsInteractor.swift in Sources */,
-				8DFAC05C2155400000FE6476 /* PostsPresenter.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				8DFAC05D2155400000FE6476 /* PostsRouter.swift in Sources */,
 				8D5E50BB2155252F0024578E /* TypicodeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         NetworkSetup.initialize()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = PostsRouter.assembleModule()
+        let storyboard = UIStoryboard(name: "Posts", bundle: nil)
+        window?.rootViewController = storyboard.instantiateInitialViewController()
         window?.makeKeyAndVisible()
         return true
     }

@@ -32,14 +32,14 @@ final class TypicodeService: TypicodeServiceProtocol {
         return requestManager.request(endpoint: endpoint).asSingle()
     }
 
-    func savePost(postEncodable: PostEncodable, scheduler: ImmediateSchedulerType?) -> Single<PostDecodable> {
+    func savePost(postEncodable: PostEncodable, scheduler: ImmediateSchedulerType?) -> Completable {
         let endpoint = Endpoint(method: .post, api: API.posts)
-        return requestManager.request(endpoint: endpoint, data: postEncodable).asSingle()
+        return requestManager.request(endpoint: endpoint, data: postEncodable).asCompletable()
     }
 
-    func updatePost(postEncodable: PostEncodable, scheduler: ImmediateSchedulerType?) -> Single<PostDecodable> {
+    func updatePost(postEncodable: PostEncodable, scheduler: ImmediateSchedulerType?) -> Completable {
         let endpoint = Endpoint(method: .put, api: API.posts, resource: String(describing: postEncodable.id))
-        return requestManager.request(endpoint: endpoint, data: postEncodable).asSingle()
+        return requestManager.request(endpoint: endpoint, data: postEncodable).asCompletable()
     }
 
 }
