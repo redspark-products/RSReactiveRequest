@@ -8,7 +8,7 @@
 
 import Foundation
 
-public  class RequestManagerConfig {
+public class RequestManagerConfig {
 
     public let apiController: APIControllerProtocol
     public let errorParser: ErrorParser?

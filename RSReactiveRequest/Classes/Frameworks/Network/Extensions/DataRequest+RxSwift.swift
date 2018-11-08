@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import CodableAlamofire
 import Alamofire
+import AlamofireImage
 
 extension DataRequest {
 
@@ -28,6 +29,14 @@ extension DataRequest {
                 RequestManager.requestReceived(response: response, observer: observer)
             })
         })
+    }
+
+    func asSingle(scheduler: ImmediateSchedulerType? = nil) -> Single<Image> {
+        return single(scheduler: scheduler) { observer in
+            self.responseImage(completionHandler: { response in
+                RequestManager.requestReceived(response: response, observer: observer)
+            })
+        }
     }
 
     // MARK: - Completable

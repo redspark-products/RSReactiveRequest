@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import RxSwift
 
-public  class RequestManager: RequestManagerProtocol {
+public class RequestManager: RequestManagerProtocol {
 
     public static var config = RequestManagerConfig()
 
@@ -31,6 +31,14 @@ public  class RequestManager: RequestManagerProtocol {
                      encoding: parameterEnconding,
                      headers: headers)
             .validate(statusCode: 200..<300)
+    }
+
+    public func request(endpoint: Endpoint, files: [FileRequest], encoding: ParameterEncoding?, headers: HTTPHeaders?) -> UploadFileRequest {
+        let parameterEncoding = encoding ?? baseParameterEncoding(method: endpoint.method)
+
+        let url = endpoint.makeURL(baseUrl: apiController.baseURL)
+
+        return UploadFileRequest(sessionManager: apiController.manager, url: url, files: files, encoding: parameterEncoding, headers: headers)
     }
 
     private func baseParameterEncoding(method: HTTPMethod) -> ParameterEncoding {
