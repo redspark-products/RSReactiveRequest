@@ -35,8 +35,8 @@
 		19AF94D976DCF5E20F7DE9465895ED30 /* SingleAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB631157ADB74878357801CD58FAF6 /* SingleAsync.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1A712FF22194A2EA00C5FDB8 /* UploadFileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A712FF12194A2EA00C5FDB8 /* UploadFileRequest.swift */; };
 		1A712FF42194A32F00C5FDB8 /* FileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A712FF32194A32F00C5FDB8 /* FileRequest.swift */; };
-		1A712FF72194A4C800C5FDB8 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A712FF62194A4C800C5FDB8 /* MimeType.swift */; };
 		1A712FF92194ADB200C5FDB8 /* UploadFileRequest+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A712FF82194ADB200C5FDB8 /* UploadFileRequest+RxSwift.swift */; };
+		1A712FFF2194C44600C5FDB8 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A712FFE2194C44600C5FDB8 /* MimeType.swift */; };
 		1AC6D263EF177F31BD803758CFB6C6BB /* NetworkDebugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475DAEC746F88F21C90DE17160814D1E /* NetworkDebugManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8696985F3E61D7E933F08190528D14A4 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E730B049113A26ADC3649F3771E4593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD42CD2D1DA16F8E59DA83C1D1C5ACA /* Foundation.framework */; };
@@ -379,8 +379,8 @@
 		19FED07B5DB21766210FEAF0D11074EF /* BehaviorSubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BehaviorSubject.swift; path = RxSwift/Subjects/BehaviorSubject.swift; sourceTree = "<group>"; };
 		1A712FF12194A2EA00C5FDB8 /* UploadFileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileRequest.swift; sourceTree = "<group>"; };
 		1A712FF32194A32F00C5FDB8 /* FileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRequest.swift; sourceTree = "<group>"; };
-		1A712FF62194A4C800C5FDB8 /* MimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
 		1A712FF82194ADB200C5FDB8 /* UploadFileRequest+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UploadFileRequest+RxSwift.swift"; sourceTree = "<group>"; };
+		1A712FFE2194C44600C5FDB8 /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
 		1A7477C915448D7EC1E90BE8A1ED613E /* Pods-RSReactiveRequest_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RSReactiveRequest_Example.modulemap"; sourceTree = "<group>"; };
 		1C90CD04CEFEB6D846FA9FE127D4D738 /* PrimitiveSequence+Zip+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PrimitiveSequence+Zip+arity.swift"; path = "RxSwift/Traits/PrimitiveSequence+Zip+arity.swift"; sourceTree = "<group>"; };
 		1CD42CD2D1DA16F8E59DA83C1D1C5ACA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -739,12 +739,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1A712FF52194A4B500C5FDB8 /* Enums */ = {
+		1A712FFB2194C3B100C5FDB8 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				1A712FF62194A4C800C5FDB8 /* MimeType.swift */,
+				1A712FFE2194C44600C5FDB8 /* MimeType.swift */,
 			);
-			path = Enums;
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		1F4E2B5B56E62C614638457A98C8ACBD /* Support Files */ = {
@@ -773,7 +773,6 @@
 		24D48CE1BA0745C7E08E9B49685F3191 /* RSReactiveRequest */ = {
 			isa = PBXGroup;
 			children = (
-				1A712FF52194A4B500C5FDB8 /* Enums */,
 				6CCFD88BFF9C01E9699290AD39C0D825 /* Extensions */,
 				44D01AD7EF4C48D91395F0E3B26A3956 /* Frameworks */,
 				B6D230FE49D983F3ED54167C9534C1B8 /* Managers */,
@@ -788,6 +787,7 @@
 		3B13270F7C6807EB3FCDBEA78E1D08CD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1A712FFB2194C3B100C5FDB8 /* Enum */,
 				16BF8E6EBC2F274893373BF31A92C83C /* Extensions */,
 				224C797212F41DB1B1B2EADCC7D17CC1 /* Managers */,
 				CAAC63934C189F4659A9B92F41710B81 /* Models */,
@@ -1762,8 +1762,8 @@
 				E2505F6EF453909649DC21721FCCCD89 /* Endpoint.swift in Sources */,
 				E976196FC3C2094A65A1AF34FB589EFB /* ErrorParser.swift in Sources */,
 				1AC6D263EF177F31BD803758CFB6C6BB /* NetworkDebugManager.swift in Sources */,
-				1A712FF72194A4C800C5FDB8 /* MimeType.swift in Sources */,
 				9B6E431D004C00F9482A06236185AB87 /* NetworkError.swift in Sources */,
+				1A712FFF2194C44600C5FDB8 /* MimeType.swift in Sources */,
 				26B749A1C833A71169DD8CC5C2325782 /* NetworkSetup.swift in Sources */,
 				070BFD9CEAEC04FACD4BE974732645D3 /* ObservableType+SubscribeAndObserveOn.swift in Sources */,
 				72C9F6DDFFA6289F29D03A4D199ED414 /* PrimitiveSequenceType+IgnoreElements.swift in Sources */,
