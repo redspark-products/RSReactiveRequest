@@ -6,10 +6,10 @@ Pod::Spec.new do |s|
     Lib to encapsulate your alamofire requests into RxSwift observable. Make a requests more simpler to use with RxSwift flows.
     DESC
 
-    s.homepage         = 'https://github.com/redspark-io/RSReactiveRequest'
+    s.homepage         = 'https://github.com/redspark-products/RSReactiveRequest'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'Marcus Costa' => 'marcus.costa@redspark.io' }
-    s.source           = { :git => 'https://github.com/redspark-io/RSReactiveRequest.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/redspark-products/RSReactiveRequest.git', :tag => s.version.to_s }
 
     s.ios.deployment_target = '12.0'
     s.swift_version = '5.0'

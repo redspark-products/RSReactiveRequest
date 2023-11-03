@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "summary": "Lib to encapsulate your alamofire requests into RxSwift observable",
   "description": "Lib to encapsulate your alamofire requests into RxSwift observable. Make a requests more simpler to use with RxSwift flows.",
-  "homepage": "https://github.com/redspark-io/RSReactiveRequest",
+  "homepage": "https://github.com/redspark-products/RSReactiveRequest",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Marcus Costa": "marcus.costa@redspark.io"
   },
   "source": {
-    "git": "https://github.com/redspark-io/RSReactiveRequest.git",
+    "git": "https://github.com/redspark-products/RSReactiveRequest.git",
     "tag": "1.0.1"
   },
   "platforms": {
